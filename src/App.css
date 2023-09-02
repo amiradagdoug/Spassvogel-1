@@ -1,8 +1,136 @@
-input[type = radio]{
+input[type=radio] {
     display: none;
 }
 
 .star {
     cursor: pointer;
-   
+
+}
+
+
+.cardJoke {
+    min-height: 400px;
+    margin-bottom: 30px;
+    border-radius: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cardJoke .card-img-top {
+
+    margin: auto;
+}
+
+.cardJoke .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 15px;
+}
+
+.cardJoke .card-title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.cardJoke .card-text {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.cardJoke .starRating svg {
+    width: 20px;
+}
+
+.cardJoke .starRating {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+
+.actionButton {
+    width: 100%;
+    border-radius: 0px;
+    color: #fff;
+    background-color: coral;
+    border: 0px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.actionButtonLeft {
+    width: auto;
+    border-radius: 0px;
+    color: #fff;
+    background-color: coral;
+    border: 0px;
+    text-transform: uppercase;
+    margin-right: 25px;
+}
+
+.actionButton:hover,
+.actionButton:focus,
+.actionButtonLeft:hover,
+.actionButtonLeft:focus {
+    background-color: rgb(118, 33, 2);
+
+}
+
+/* Header */
+.nav-link img {
+    max-width: 140px;
+}
+
+header .navbar {
+    box-shadow: 0px 0px 10px #aaaaaa;
+}
+
+header #basic-navbar-nav .nav-link {
+    color: #000;
+    text-transform: uppercase;
+    background: #ccc;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.spassvogel-footer {
+    background-color: #ccc;
+    margin-bottom: 0px !important;
+}
+
+
+.spassvogel-footer p {
+    margin-bottom: 0px !important;
+}
+
+.homePage .actionButton {
+    display: inline-block;
+    width: auto;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+#carouselExampleControls {
+    max-width: 100%;
+    margin: auto;
+}
+
+.contentPage {
+    min-height: 65vh;
+}
+
+.recharts-wrapper .recharts-bar-rectangle .recharts-rectangle,
+.recharts-legend-item path {
+    fill: coral;
+}
+
+.recharts-legend-item-text,
+.recharts-default-tooltip ul * {
+    color: coral !important;
 }
