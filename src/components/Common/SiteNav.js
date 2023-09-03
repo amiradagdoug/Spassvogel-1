@@ -11,19 +11,21 @@ function SiteNav(props) {
 
     return (
         <header>
-           <Navbar bg="dark" expand="lg" variant="dark">
+            <Navbar bg="white" expand="lg" variant="dark">
 
-           <Container>
-                    <Navbar.Brand><Nav.Link href="/">Spassvogel App</Nav.Link></Navbar.Brand>
+                <Container>
+                    <Navbar.Brand><Nav.Link href="/">
+                        <img src="/img/spassvogel-logo.png" />
+                    </Nav.Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="ms-md-auto">
-                           
-                            <Nav.Link onClick={handleLogout}>Log out</Nav.Link>   
-                            </Nav>
-                        </Navbar.Collapse>
-            </Container>
-           </Navbar>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-md-auto">
+
+                            <Nav.Link onClick={handleLogout}>Ausloggen</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
 
         </header>
     )
