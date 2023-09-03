@@ -12,6 +12,9 @@ export default function DadJoke() {
     const [jokes,setJokes] = useState ("");
     
     const getJokes = () =>{
+        
+        setRating (null);
+       
         let config = {
             headers :{
                 Accept : "application/json"
@@ -24,8 +27,11 @@ export default function DadJoke() {
             // let randumNum = Math.floor(Math.random() * data.length);
             setJokes(data.joke);
         });
+        
        
     }
+
+    
 
     useEffect(() => {
         getJokes();
@@ -45,6 +51,9 @@ export default function DadJoke() {
 
             // Persist new Contact
             await API.graphql(graphqlOperation(createContact, {input: newContact}));
+
+            getJokes();
+
         } catch(err) {
             console.log('error', err);
         }
@@ -67,7 +76,7 @@ export default function DadJoke() {
                              <FaStar
                              className='star'
                              size={30}
-                             color ={currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9" }
+                             color ={ currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
                              onMouseEnter={()=> setHover(currentRating)}
                              onMouseLeave={()=> setHover(null)}
                              />

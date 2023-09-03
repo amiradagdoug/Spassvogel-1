@@ -12,6 +12,8 @@ export default function QuoteApi() {
     const [jokes,setJokes] = useState ("");
     
     const getJokes = () =>{
+
+        setRating (null);
         fetch("https://type.fit/api/quotes")
         .then ((res) => res.json())
         .then ((data) => {
@@ -25,6 +27,7 @@ export default function QuoteApi() {
     },[]);
 
     const addNewContact = async () => {
+        getJokes();
         try {
             const newContact = {
                 id: uuid(),
@@ -33,8 +36,7 @@ export default function QuoteApi() {
                 cell : rating ,
                 profilePicPath: "joke"
             };
-
-            
+                       
 
             // Persist new Contact
             await API.graphql(graphqlOperation(createContact, {input: newContact}));
