@@ -10,10 +10,10 @@ input[type=radio] {
 
 .cardJoke {
     min-height: 400px;
-    margin-bottom: 30px;
     border-radius: 0px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .cardJoke .card-img-top {
@@ -41,15 +41,11 @@ input[type=radio] {
     font-size: 14px;
 }
 
-.cardJoke .starRating svg {
+.starRating svg {
     width: 20px;
 }
 
-.cardJoke .starRating {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-}
+
 
 
 .actionButton {
@@ -62,6 +58,9 @@ input[type=radio] {
     padding: 10px 15px;
     font-weight: 600;
     text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    text-align: left;
 }
 
 .actionButtonLeft {
@@ -72,6 +71,17 @@ input[type=radio] {
     border: 0px;
     text-transform: uppercase;
     margin-right: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+
+.actionButtonLeft button {
+    border: transparent;
+    padding: 0px;
+    color: #ffffff !important;
+    text-decoration: none;
 }
 
 .actionButton:hover,
@@ -79,7 +89,7 @@ input[type=radio] {
 .actionButtonLeft:hover,
 .actionButtonLeft:focus {
     background-color: rgb(118, 33, 2);
-
+    color: #fff;
 }
 
 /* Header */
@@ -133,4 +143,78 @@ header #basic-navbar-nav .nav-link {
 .recharts-legend-item-text,
 .recharts-default-tooltip ul * {
     color: coral !important;
+}
+
+/* Form */
+form .form-control {
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    color: #000;
+    background-color: var(--bs-body-bg);
+    border-color: coral;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255, 127, 80, .25);
+}
+
+.editButton {
+    position: relative;
+    background: coral;
+    border-radius: 0;
+    padding: 15px;
+    border: none;
+}
+
+.editButton::before {
+    content: '';
+    position: absolute;
+    background: url('../public/img/icons-edit.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 5px;
+}
+
+
+.deleteButton {
+    position: relative;
+    background: coral;
+    border-radius: 0;
+    padding: 15px;
+    border: none;
+}
+
+.deleteButton::before {
+    content: '';
+    position: absolute;
+    background: url('../public/img/icons-delete.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 5px;
+}
+
+
+.nextButton {
+    position: relative;
+    background: coral;
+    border-radius: 0;
+    padding: 15px 25px;
+    border: none;
+    display: inline-block;
+    width: auto;
+}
+
+.nextButton::before {
+    content: '';
+    position: absolute;
+    background: url('../public/img/icons-next.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 18px;
+    top: 5px;
 }
