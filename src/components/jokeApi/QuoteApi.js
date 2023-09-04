@@ -13,12 +13,12 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 export default function QuoteApi() {
-
-    const [rating, setRating] = useState(null);
-    const [hover, setHover] = useState(null);
-    const [jokes, setJokes] = useState("");
-
-    const getJokes = () => {
+    
+    const [rating , setRating]= useState(null);
+    const [hover , setHover] = useState(null);
+    const [jokes,setJokes] = useState ("");
+    
+    const getJokes = () =>{
         fetch("https://type.fit/api/quotes")
             .then((res) => res.json())
             .then((data) => {
@@ -32,6 +32,7 @@ export default function QuoteApi() {
     }, []);
 
     const addNewContact = async () => {
+        getJokes();
         try {
             const newContact = {
                 id: uuid(),
@@ -41,7 +42,7 @@ export default function QuoteApi() {
                 profilePicPath: "joke"
             };
 
-
+            
 
             // Persist new Contact
             await API.graphql(graphqlOperation(createContact, { input: newContact }));
