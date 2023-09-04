@@ -32,7 +32,7 @@ export default function QuoteApi() {
     }, []);
 
     const addNewContact = async () => {
-        getJokes();
+        
         try {
             const newContact = {
                 id: uuid(),

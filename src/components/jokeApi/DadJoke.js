@@ -13,7 +13,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 export default function DadJoke() {
-
+  
     const [rating , setRating]= useState(null);
     const [hover , setHover] = useState(null);
     const [jokes,setJokes] = useState ("");
@@ -41,6 +41,7 @@ export default function DadJoke() {
     }, []);
 
     const addNewContact = async () => {
+        getJokes();
         try {
             const newContact = {
                 id: uuid(),
@@ -88,7 +89,6 @@ export default function DadJoke() {
                 <button className='actionButton' onClick={getJokes}> next Joke</button>
 
                 <button className='actionButton' onClick={addNewContact}>Add Joke &gt;&gt;</button>&nbsp;
-            </Row>
-        </Container>
+      </div>
     )
 }
