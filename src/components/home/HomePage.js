@@ -13,22 +13,19 @@ function HomePage() {
             <Row className="px-4 my-5">
                 <Col xs={4} sm={5}>
                     <Image
-                        src="/img/homeImage.jpeg"
+                        src="/img/homeimage.jpeg"
                         fluid />
                 </Col>
                 <Col sm={7}>
-                    <h1 className="font-weight-light">Spassvogel App</h1>
-                    <h3>Herzlich Willkommen</h3>
-                    <p className="mt-4">
+                    <h1 className="font-weight-light mt-4 my-5">Spassvogel App</h1>
+                    <h3 className='my-3'>Herzlich Willkommen</h3>
+                    <p className="mt-4 my-3">
 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Die "Spassvogel" App ist eine humorvolle Anwendung, die entwickelt wurde, um Spaß und Unterhaltung zu bieten. Mit einer breiten Sammlung von Witzen und humorvollen Inhalten bringt sie Freude in den Alltag ihrer Benutzer. Die App ermöglicht es den Nutzern, zufällige Witze zu generieren, eigene Witze beizutragen und sich von humorvollen Inhalten inspirieren zu lassen. Spaßvogel ist die ideale Anwendung, um ein Lächeln auf Ihr Gesicht zu zaubern und Ihren Tag aufzuhellen.
                     </p>
 
                     <Link to={{ pathname: '/contacts' }}>
-                        <Button className='actionButton' variant="outline-primary">LET'S Go! </Button>
+                        <Button className='actionButton mt-3' variant="outline-primary">LET'S Go! </Button>
                     </Link>
 
 

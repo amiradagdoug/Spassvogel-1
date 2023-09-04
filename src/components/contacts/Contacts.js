@@ -139,13 +139,12 @@ export default function Contacts() {
         <Container className='contentPage'>
 
 
+
             <Row className=" my-5">
-                <Col><h1>Jokes</h1></Col>
-
-            </Row >
-            <Row>
-                <div className="col-md-3 px-4 my-2">
-
+                <div className="col-md-3 my-2">
+                    <Link to={{ pathname: '/contacts' }} className='actionButton act'>
+                        Joke anschauen &gt;
+                    </Link>
                     <Link to={{ pathname: '/quote' }} className='actionButton'>
                         Quotes anschauen &gt;
                     </Link>
@@ -156,7 +155,8 @@ export default function Contacts() {
                         Top Ten &gt;
                     </Link>
                 </div>
-                <div className="col-md-9 px-4 my-2 mb-4">
+                <div className="col-md-9 my-2 mb-4">
+                    <h1 className='my-4 mt-0'>Jokes</h1>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
                         <div class="carousel-inner">

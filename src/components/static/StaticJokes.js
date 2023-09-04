@@ -11,6 +11,7 @@ import Card from 'react-bootstrap/Card';
 
 import { CartesianGrid, Tooltip, Legend, BarChart, Bar, XAxis, YAxis } from 'recharts';
 
+import { Link } from 'react-router-dom';
 
 export default function StaticJokes() {
   const [contacts, setContacts] = useState([]);
@@ -48,32 +49,49 @@ export default function StaticJokes() {
 
 
     <Container className='contentPage'>
-      <Row className="px-4 my-5">
-        <Col><h1>Top Ten</h1></Col>
+      <Row className="my-5">
+        <div className="col-md-3 my-2">
+          <Link to={{ pathname: '/contacts' }} className='actionButton'>
+            Joke anschauen &gt;
+          </Link>
+          <Link to={{ pathname: '/quote' }} className='actionButton'>
+            Quotes anschauen &gt;
+          </Link>
+          <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
+            Dadjokes anschauen &gt;
+          </Link>
+          <Link to={{ pathname: '/static' }} className='actionButton act'>
+            Top Ten &gt;
+          </Link>
+        </div>
+        <div className="col-md-9 my-2">
+          <h1 className='my-4 mt-0'>Top Ten</h1>
+          <div  >
+            <BarChart
+              width={1000}
+              height={300}
+              data={contacts}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+              barSize={10}
+            >
+              <XAxis dataKey="" scale="point" padding={{ left: 10, right: 10 }} />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <CartesianGrid strokeDasharray="7 7" />
+              <Bar dataKey="cell" fill="#8884d8" background={{ fill: '#eee' }} />
+            </BarChart>
+          </div>
+        </div>
       </Row>
       <Row>
 
-        <div  >
-          <BarChart
-            width={1000}
-            height={300}
-            data={contacts}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-            barSize={10}
-          >
-            <XAxis dataKey="" scale="point" padding={{ left: 10, right: 10 }} />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <CartesianGrid strokeDasharray="7 7" />
-            <Bar dataKey="cell" fill="#8884d8" background={{ fill: '#eee' }} />
-          </BarChart>
-        </div>
+
       </Row>
     </Container>
   )

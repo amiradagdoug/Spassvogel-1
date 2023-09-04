@@ -54,13 +54,18 @@ input[type=radio] {
     color: #fff;
     background-color: coral;
     border: 0px;
-    margin-bottom: 30px;
-    padding: 10px 15px;
+    margin-bottom: 20px;
+    padding: 8px 15px;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
     text-decoration: none;
     text-align: left;
+}
+
+.actionButton.act {
+    background-color: rgb(118, 33, 2);
+    color: #fff;
 }
 
 .actionButtonLeft {
@@ -217,4 +222,30 @@ form .form-control {
     height: 20px;
     left: 18px;
     top: 5px;
+}
+
+/* Login */
+
+.amplify-button--primary {
+    background: coral !important;
+    border-radius: 0 !important;
+    font-weight: 400;
+}
+
+.amplify-tabs-item[data-state=active] {
+    border-color: coral !important;
+    color: coral !important;
+}
+
+.amplify-button--link {
+    color: coral !important;
+}
+
+.amplify-input:focus {
+    border-color: coral !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 127, 80, .25) !important;
+}
+
+[data-amplify-authenticator] {
+    margin-top: 5em;
 }
