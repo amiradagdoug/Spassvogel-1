@@ -52,16 +52,16 @@ export default function StaticJokes() {
       <Row className="my-5">
         <div className="col-md-3 my-2">
           <Link to={{ pathname: '/contacts' }} className='actionButton'>
-            Joke anschauen &gt;
+            Jokes  &gt;
           </Link>
           <Link to={{ pathname: '/quote' }} className='actionButton'>
-            Quotes anschauen &gt;
+            Zitaten  &gt;
           </Link>
           <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
-            Dadjokes anschauen &gt;
+            Dadjokes  &gt;
           </Link>
           <Link to={{ pathname: '/static' }} className='actionButton act'>
-            Top Ten &gt;
+            Top-10 Witze &gt;
           </Link>
         </div>
         <div className="col-md-9 my-2">

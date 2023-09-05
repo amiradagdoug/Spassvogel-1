@@ -63,22 +63,22 @@ export default function DadJoke() {
             <Row className=" my-5">
                 <div className="col-md-3 my-2">
                     <Link to={{ pathname: '/contacts' }} className='actionButton'>
-                        Joke anschauen &gt;
+                        Jokes  &gt;
                     </Link>
                     <Link to={{ pathname: '/quote' }} className='actionButton '>
-                        Quotes anschauen &gt;
+                        Zitaten  &gt;
                     </Link>
                     <Link to={{ pathname: '/dadjoke' }} className='actionButton act'>
-                        Dadjokes anschauen &gt;
+                        Dadjokes  &gt;
                     </Link>
                     <Link to={{ pathname: '/static' }} className='actionButton'>
-                        Top Ten &gt;
+                        Top 10 Witze &gt;
                     </Link>
                 </div>
 
                 <div className="col-md-9 my-2">
-                    <h1 className='my-4 mt-0'>Dadjokes</h1>
-                    <div className='text-center'>
+                    <h2 className='my-4 mt-0'>Dadjokes</h2>
+                    <div className='text-center  content-testimonals'>
                         <p>{jokes}</p>
                         <div className='starRating'  >
                             {[...Array(5)].map((star, index) => {

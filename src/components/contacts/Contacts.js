@@ -143,20 +143,20 @@ export default function Contacts() {
             <Row className=" my-5">
                 <div className="col-md-3 my-2">
                     <Link to={{ pathname: '/contacts' }} className='actionButton act'>
-                        Joke anschauen &gt;
+                        Jokes &gt;
                     </Link>
                     <Link to={{ pathname: '/quote' }} className='actionButton'>
-                        Quotes anschauen &gt;
+                        Zitaten &gt;
                     </Link>
                     <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
-                        Dadjokes anschauen &gt;
+                        Dadjokes  &gt;
                     </Link>
                     <Link to={{ pathname: '/static' }} className='actionButton'>
-                        Top Ten &gt;
+                        Top-10 Witze  &gt;
                     </Link>
                 </div>
                 <div className="col-md-9 my-2 mb-4">
-                    <h1 className='my-4 mt-0'>Jokes</h1>
+                    <h2 className='my-4 mt-0'>Jokes</h2>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
                         <div class="carousel-inner">
@@ -188,11 +188,11 @@ export default function Contacts() {
                                     } else {
                                         return (
 
-                                            <Card className='cardJoke carousel-item' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
+                                            <Card className='cardJoke carousel-item' style={{ backgroundImage: 'url(profilePicPaths[indx])' }} >
 
-                                                {/* <Card.Img
-                            src={profilePicPaths[indx] || ''}
-                            variant="top" /> */}
+                                                <Card.Img
+                                                    src={profilePicPaths[indx] || ''}
+                                                    variant="top" />
 
                                                 <Card.Body>
                                                     <Card.Title>{contact.name} </Card.Title>
@@ -223,7 +223,7 @@ export default function Contacts() {
                         </a>
                     </div>
 
-                    <button className='mt-5 actionButtonLeft ' onClick={() => setShowForm(true)}>Neue Joke hinzufügen +</button>
+                    <button className='mt-5 actionButtonLeft ' onClick={() => setShowForm(true)}>Neue Joke hinzufügen </button>
 
                     {showForm && (<Row className="mt-5 newJokeForm">
 
@@ -231,7 +231,7 @@ export default function Contacts() {
                         <Form>
                             <Form.Group className="mt-4 mb-3" controlId="formBasicText">
                                 <Form.Label>Deine Joke</Form.Label>
-                                <Form.Control type="text" placeholder="Deine Joke"
+                                <Form.Control type="text" placeholder="Joke'Name"
                                     value={contactData.name}
                                     onChange={evt => setContactData({ ...contactData, name: evt.target.value })} />
                             </Form.Group>

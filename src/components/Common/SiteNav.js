@@ -15,7 +15,7 @@ function SiteNav(props) {
 
                 <Container>
                     <Navbar.Brand><Nav.Link href="/">
-                        <img src="/img/spassvogel-logo.png" />
+                        <img src="/img/homePage1.png" />
                     </Nav.Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

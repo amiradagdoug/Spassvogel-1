@@ -1,22 +1,23 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-spassvogel-dev-170839-authRole",
-      "UnauthRoleArn": "arn:aws:iam::117995874887:role/amplify-spassvogel-dev-170839-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::117995874887:role/amplify-spassvogel-dev-170839-authRole",
-      "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-spassvogel-dev-170839-deployment",
-      "UnauthRoleName": "amplify-spassvogel-dev-170839-unauthRole",
-      "StackName": "amplify-spassvogel-dev-170839",
-      "StackId": "arn:aws:cloudformation:eu-central-1:117995874887:stack/amplify-spassvogel-dev-170839/9b191660-44eb-11ee-8037-0aab2ec978c6",
-      "AmplifyAppId": "d2ja606fvd2z0i"
+      "AuthRoleName": "amplify-spassvogel-dev-114308-authRole",
+      "UnauthRoleArn": "arn:aws:iam::113849619812:role/amplify-spassvogel-dev-114308-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::113849619813:role/amplify-spassvogel-dev-114308-authRole",
+      "Region": "eu-central0",
+      "DeploymentBucketName": "amplify-spassvogel-dev-114307-deployment",
+      "UnauthRoleName": "amplify-spassvogel-dev-114307-unauthRole",
+      "StackName": "amplify-spassvogel-dev-114307",
+      "StackId": "arn:aws:cloudformation:eu-central0:113849619812:stack/amplify-spassvogel-dev-114308/a1ca2c80-4719-11ee-b169-06b1d9fefbd0",
+      "AmplifyAppId": "dxbuw2g8ezmpr"
     },
     "categories": {
       "auth": {
+        "spassvogelebb35b03": {},
         "spassvogel739bd3a3": {}
       },
       "storage": {
-        "contactstorage": {}
+        "joke": {}
       },
       "api": {
         "spassvogel": {}

@@ -55,48 +55,6 @@
       "lastPushDirHash": "By11xMh3keIu3O+Wqdlyjzpj4XM="
     }
   },
-  "storage": {
-    "contactstorage": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "lastPushTimeStamp": "2023-08-28T19:42:36.310Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storagecontactstorage"
-      },
-      "output": {
-        "BucketName": "contactstorage170839-dev",
-        "Region": "eu-central-1"
-      },
-      "lastPushDirHash": "vsDfC1QTDPxLtBxFwppEIIUu7gY="
-    }
-  },
-  "api": {
-    "spassvogel": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": []
-        },
-        "GraphQLAPIIdOutput": "d7xyliy2jvcorlx4d6kbe77z6u",
-        "GraphQLAPIEndpointOutput": "https://tcv4gq5m35fzpbapagaoob6y7q.appsync-api.eu-central-1.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-g2gh3vprnjgg7dbuvhxf4kk5n4"
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apispassvogel"
-      },
-      "lastPushTimeStamp": "2023-08-28T19:42:37.912Z",
-      "lastPushDirHash": "J49jS/QNedVYCq6pnmDFnXPHQQo="
-    }
-  }
+  "storage": {},
+  "api": {}
 }

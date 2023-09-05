@@ -51,7 +51,7 @@ input[type=radio] {
 .actionButton {
     width: 100%;
     border-radius: 0px;
-    color: #fff;
+    color: #000 !important;
     background-color: coral;
     border: 0px;
     margin-bottom: 20px;
@@ -61,23 +61,42 @@ input[type=radio] {
     display: block;
     text-decoration: none;
     text-align: left;
+    background: rgb(219, 219, 41);
+    background: linear-gradient(90deg, rgba(219, 219, 41, 1) 0%, rgba(237, 117, 222, 1) 46%, rgba(41, 183, 219, 1) 100%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.actionButton:hover {
+    background: rgb(41, 183, 219);
+    background: linear-gradient(90deg, rgba(41, 183, 219, 1) 0%, rgba(237, 117, 222, 1) 46%, rgba(219, 219, 41, 1) 100%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .actionButton.act {
-    background-color: rgb(118, 33, 2);
-    color: #fff;
+    background: rgb(41, 183, 219);
+    background: linear-gradient(90deg, rgba(41, 183, 219, 1) 0%, rgba(237, 117, 222, 1) 46%, rgba(219, 219, 41, 1) 100%);
 }
 
 .actionButtonLeft {
     width: auto;
     border-radius: 0px;
-    color: #fff;
-    background-color: coral;
+    color: #000 !important;
+    background: rgb(219, 219, 41);
+    background: linear-gradient(90deg, rgba(219, 219, 41, 1) 0%, rgba(237, 117, 222, 1) 46%, rgba(41, 183, 219, 1) 100%);
     border: 0px;
     text-transform: uppercase;
     margin-right: 25px;
-    padding: 10px 20px;
+    padding: 6px 20px;
     text-decoration: none;
+    font-size: 15px;
+    border-radius: 0px;
+    font-weight: 500;
 }
 
 
@@ -99,7 +118,8 @@ input[type=radio] {
 
 /* Header */
 .nav-link img {
-    max-width: 140px;
+    max-width: 110px;
+    border-radius: 50%;
 }
 
 header .navbar {
@@ -205,7 +225,7 @@ form .form-control {
 
 .nextButton {
     position: relative;
-    background: coral;
+    background: linear-gradient(90deg, rgba(41, 183, 219, 1) 0%, rgba(237, 117, 222, 1) 46%, rgba(219, 219, 41, 1) 100%);
     border-radius: 0;
     padding: 15px 25px;
     border: none;
@@ -248,4 +268,8 @@ form .form-control {
 
 [data-amplify-authenticator] {
     margin-top: 5em;
+}
+
+.content-testimonals p {
+    font-weight: 600;
 }
