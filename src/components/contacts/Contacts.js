@@ -159,7 +159,7 @@ export default function Contacts() {
                 <div className="col-md-9 px-4 my-2 mb-4">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-                        <div class="carousel-inner">
+                        <div className="carousel-inner">
                             {
                                 contacts.map((contact, indx) => {
                                     if (indx == 0) {
@@ -225,7 +225,8 @@ export default function Contacts() {
 
                     <button className='mt-5 actionButtonLeft ' onClick={() => setShowForm(true)}>Neue Joke hinzufügen +</button>
 
-                    {showForm && (<Row className="mt-5 newJokeForm">
+                    {showForm && (
+                        <Row className="mt-5 newJokeForm">
 
                         <h4>Neue Joke hinzufügen</h4>
                         <Form>
