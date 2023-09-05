@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Modal from 'react-bootstrap/Modal';
 
 import { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
@@ -10,20 +11,25 @@ import { v4 as uuid } from 'uuid';
 import { API, graphqlOperation, Storage } from 'aws-amplify';
 import { createContact, updateContact, deleteContact } from '../../graphql/mutations';
 import { listContacts } from '../../graphql/queries';
-import { background } from '@chakra-ui/react';
+
 
 import { Link } from 'react-router-dom';
 
 
 
+
 export default function Contacts() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
 
     const [contacts, setContacts] = useState([]);
     const [contactData, setContactData] = useState({ name: "", email: "", cell: "" });
     const [profilePic, setProfilePic] = useState("");
     const [profilePicPaths, setProfilePicPaths] = useState([]);
-    const [showForm, setShowForm] = useState(false);
+    
 
 
 
@@ -60,6 +66,7 @@ export default function Contacts() {
     }, []);
 
     const addNewContact = async () => {
+      
         try {
             const { name, email, cell } = contactData;
 
@@ -79,6 +86,7 @@ export default function Contacts() {
             await API.graphql(graphqlOperation(createContact, { input: newContact }));
             // After successfully adding the new contact, refresh the contacts
             await getContacts();
+            
         } catch (err) {
             console.log('error', err);
         }
@@ -147,39 +155,43 @@ export default function Contacts() {
                 <div className="col-md-3 px-4 my-2">
 
                     <Link to={{ pathname: '/quote' }} className='actionButton'>
-                        Quotes anschauen &gt;
+                        Quotes  &gt;
                     </Link>
                     <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
-                        Dadjokes anschauen &gt;
+                        Jokes &gt;
                     </Link>
                     <Link to={{ pathname: '/static' }} className='actionButton'>
                         Top Ten &gt;
                     </Link>
                 </div>
                 <div className="col-md-9 px-4 my-2 mb-4">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 
                         <div className="carousel-inner">
                             {
                                 contacts.map((contact, indx) => {
-                                    if (indx == 0) {
+                                    if (indx === 0) {
                                         return (
 
-                                            <Card className='cardJoke carousel-item active' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
+                                            <Card key={indx} className='cardJoke carousel-item active' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
 
-                                                {/*   <Card.Img
-                            src={profilePicPaths[indx] || ''}
-                            variant="top" />  */}
+                                                  <Card.Img style={{width: '200px', height: '200px'}}
+                                                        src={profilePicPaths[indx] || ''}
+                                                        variant="top" /> 
 
                                                 <Card.Body>
                                                     <Card.Title>{contact.name} </Card.Title>
                                                     <Card.Text>
                                                         {contact.cell}
                                                     </Card.Text>
-                                                    <div style={{ display: "flex", gap: "10px" }}>
+                                                    {/* <div key={indx} style={{ display: "flex", gap: "10px" }}>
                                                         <Button className='editButton' variant="primary" onClick={() => { editContent(contact) }}></Button>
                                                         <Button className='deleteButton' variant="primary" onClick={() => { deleteContent(contact) }}></Button>
-                                                    </div>
+                                                    </div> */}
+                                                    <div style={{ display: "flex", gap: "10px" }}>
+                <Button variant="primary" onClick={()=> {editContent(contact)}}> edit </Button> 
+                <Button variant="primary" onClick={()=> {deleteContent(contact)}}> delete </Button>
+                </div>
 
                                                 </Card.Body>
                                             </Card>
@@ -188,21 +200,25 @@ export default function Contacts() {
                                     } else {
                                         return (
 
-                                            <Card className='cardJoke carousel-item' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
+                                            <Card key={indx} className='cardJoke carousel-item' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
 
-                                                {/* <Card.Img
-                            src={profilePicPaths[indx] || ''}
-                            variant="top" /> */}
+                                                <Card.Img style={{width: '200px', height: '200px'}}
+                                                        src={profilePicPaths[indx] || ''}
+                                                        variant="top" />
 
                                                 <Card.Body>
                                                     <Card.Title>{contact.name} </Card.Title>
                                                     <Card.Text>
                                                         {contact.cell}
                                                     </Card.Text>
+                                                    {/* <div key={indx} style={{ display: "flex", gap: "10px" }}>
+                                                        <Button className='editButton' variant="primary" onClick={() => { editContent(contact) }}>edit</Button>
+                                                        <Button className='deleteButton' variant="primary" onClick={() => { deleteContent(contact) }}>delete</Button>
+                                                    </div> */}
                                                     <div style={{ display: "flex", gap: "10px" }}>
-                                                        <Button className='editButton' variant="primary" onClick={() => { editContent(contact) }}></Button>
-                                                        <Button className='deleteButton' variant="primary" onClick={() => { deleteContent(contact) }}></Button>
-                                                    </div>
+                <Button variant="primary" onClick={()=> {editContent(contact)}}> edit </Button> 
+                <Button variant="primary" onClick={()=> {deleteContent(contact)}}> delete </Button>
+                </div>
 
                                                 </Card.Body>
                                             </Card>
@@ -213,44 +229,72 @@ export default function Contacts() {
                                 })
                             }
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Next</span>
                         </a>
                     </div>
 
-                    <button className='mt-5 actionButtonLeft ' onClick={() => setShowForm(true)}>Neue Joke hinzufügen +</button>
+                    <button  className='actionButton' variant="primary" onClick={handleShow}>Neue Joke hinzufügen +</button>
 
-                    {showForm && (
-                        <Row className="mt-5 newJokeForm">
-
-                        <h4>Neue Joke hinzufügen</h4>
-                        <Form>
-                            <Form.Group className="mt-4 mb-3" controlId="formBasicText">
-                                <Form.Label>Deine Joke</Form.Label>
-                                <Form.Control type="text" placeholder="Deine Joke"
-                                    value={contactData.name}
-                                    onChange={evt => setContactData({ ...contactData, name: evt.target.value })} />
+                    {/* {showForm && ( */}
+                        <Modal   show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                          <Modal.Title>Neue Joke hinzufügen</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                          <Form>
+                            <Form.Group  className="mb-3" controlId="formBasicText">
+                              <Form.Label>Deine Joke</Form.Label>
+                              <Form.Control
+                                type="text"
+                                placeholder="Deine Joke"
+                                value={contactData.email}
+                                onChange={(evt) =>
+                                  setContactData({ ...contactData, name: evt.target.value })
+                                }
+                              />
                             </Form.Group>
-
-                            <Form.Group className="mb-3" controlId="formBasicText">
-                                <Form.Label>Author</Form.Label>
-                                <Form.Control type="text" placeholder="Author"
-                                    value={contactData.cell}
-                                    onChange={evt => setContactData({ ...contactData, cell: evt.target.value })} />
+                  
+                            <Form.Group  className="mb-3" controlId="formBasicText">
+                              <Form.Label>Author</Form.Label>
+                              <Form.Control
+                                type="text"
+                                placeholder="Author"
+                                value={contactData.name}
+                                onChange={(evt) =>
+                                  setContactData({ ...contactData, cell: evt.target.value })
+                                }
+                              />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicText">
-                                <Form.Label>Joke Bild</Form.Label>
-                                <Form.Control type="file" accept="image/png"
-                                    onChange={evt => setProfilePic(evt.target.files[0])} />
+                  
+                            <Form.Group  className="mb-3" controlId="formBasicText">
+                              <Form.Label>Joke Bild</Form.Label>
+                              <Form.Control
+                                type="file"
+                                accept="image/png"
+                                onChange={(evt) => setProfilePic(evt.target.files[0])}
+                              />
                             </Form.Group>
-                            <Button className='mt-4 actionButtonLeft' variant="primary" type="button" onClick={addNewContact}>Joke einfügen</Button>&nbsp;
-                        </Form>
-                    </Row>)}
+                          </Form>
+                        </Modal.Body>
+                        <Modal.Footer>
+                          <Button variant="secondary" onClick={handleClose}>
+                            Abbrechen
+                          </Button>
+                          <Button variant="primary" onClick={() => {
+                                                                    addNewContact();
+                                                                    handleClose();
+                                                                }}>
+                            Joke einfügen
+                          </Button>
+                        </Modal.Footer>
+                      </Modal>
+                        
                 </div>
             </Row >
 

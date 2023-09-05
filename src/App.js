@@ -14,7 +14,7 @@ import '@aws-amplify/ui-react/styles.css';
 import QuoteApi from './components/jokeApi/QuoteApi';
 import DadJoke from './components/jokeApi/DadJoke';
 import StaticJokes from './components/static/StaticJokes';
-// import Topten from './components/static/Topten';
+
 
 
 Amplify.configure(awsExports);
@@ -34,7 +34,7 @@ function App() {
             <Route path='/quote' element={<QuoteApi />} />
             <Route path='/dadjoke' element={<DadJoke />} />
             <Route path='/static' element={<StaticJokes />} />
-            {/* <Route path='/top' element={<Topten/>}/> */}
+           
 
           </Routes>
           <SiteFooter />
