@@ -36,8 +36,8 @@ export default function QuoteApi() {
         try {
             const newContact = {
                 id: uuid(),
-                name: jokes.text,
-                email: jokes.author,
+                name: jokes.author,
+                email: jokes.text,
                 cell: rating,
                 profilePicPath: "joke"
             };
@@ -58,18 +58,19 @@ export default function QuoteApi() {
                 <Col><h1>Qotes</h1></Col>
             </Row>
             <Row>
-                <div className="col-md-3 px-4 my-2">
+            <div className="col-md-3 px-4 my-2">
 
-                    <Link to={{ pathname: '/contacts' }} className='actionButton'>
-                        Joke anschauen &gt;
-                    </Link>
-                    <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
-                        Dadjokes anschauen &gt;
-                    </Link>
-                    <Link to={{ pathname: '/static' }} className='actionButton'>
-                        Top Ten &gt;
-                    </Link>
-                </div>
+                <Link to={{ pathname: '/contacts' }} className='actionButton'>
+                    Dashboard &gt;
+                </Link>
+                
+                <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
+                    Jokes  &gt;
+                </Link>
+                <Link to={{ pathname: '/static' }} className='actionButton'>
+                    Top Ten &gt;
+                </Link>
+            </div>
                 <div className="col-md-9 px-4 my-2">
                     <p> {jokes.text}</p>
                     <div className='starRating' >

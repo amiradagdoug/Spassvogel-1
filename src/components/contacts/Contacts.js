@@ -155,7 +155,7 @@ export default function Contacts() {
                 <div className="col-md-3 px-4 my-2">
 
                     <Link to={{ pathname: '/quote' }} className='actionButton'>
-                        Quotes  &gt;
+                        Zitat  &gt;
                     </Link>
                     <Link to={{ pathname: '/dadjoke' }} className='actionButton'>
                         Jokes &gt;
