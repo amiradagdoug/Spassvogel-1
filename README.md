@@ -2,14 +2,14 @@
 This is a website where users can read and enjoy a wide range of jokes and meaningful quotes. They can also interact with the website by contributing their jokes which are then stored in the database. It also displays the top ten jokes based on the user ratings.
 
 ## Demo
-Check out the live demo of the website:[Demo Link](https://dev.d2ja606fvd2z0i.amplifyapp.com/quote)
+Check out the live demo of the website:[Demo Link](https://dev.d2ja606fvd2z0i.amplifyapp.com)
 
 # To use this website follow these steps :
-Click on the link [Demo Link](https://dev.d2ja606fvd2z0i.amplifyapp.com/quote)
+Click on the link [Demo Link](https://dev.d2ja606fvd2z0i.amplifyapp.com)
  - Enter verification code from your Email to register on the website
  - After registration you can login to the website and navigate to different parts of the website
 
- ![Software Structure ](./public/image/softwareArchitect.png)
+ ![Software Structure ](./public/img/softwareArchitect.png)
  
 # Feature of this website:
 The website has been built with the aim of adding some fun to the users’ daily life. It has a huge database of a variety of jokes to make sure that no joke is repeated often.
@@ -26,7 +26,7 @@ Also we can attract more users by giving out prizes for the users whose jokes ma
 
 # Data Structure :
 
-![Software Structure ](./public/image/Spassvogeldokumentation.png)
+![Software Structure ](./public/img/Spassvogeldokumentation.png)
 
 # Learn More
 The online resources which have been used to build this website are listed below. You can check out these resources to understand more.
@@ -49,7 +49,7 @@ The online resources which have been used to build this website are listed below
 
  - To code bar graph showing top 10 jokes : Create Charts in React
   - https://www.youtube.com/watch?v=-CwzaTKniH4
-  
+
  - Bootstrap documentation
   - https://react-bootstrap.github.io/
 
