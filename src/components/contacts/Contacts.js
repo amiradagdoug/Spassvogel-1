@@ -175,7 +175,7 @@ export default function Contacts() {
 
                                             <Card key={indx} className='cardJoke carousel-item active' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
 
-                                                  <Card.Img style={{width: '200px', height: '200px'}}
+                                                  <Card.Img style={{width: '1000px', height: '500px'}}
                                                         src={profilePicPaths[indx] || ''}
                                                         variant="top" /> 
 
@@ -202,7 +202,7 @@ export default function Contacts() {
 
                                             <Card key={indx} className='cardJoke carousel-item' style={{ backgroundImage: 'url(https://dummyimage.com/1000x500/a339a3/ffffff)' }} >
 
-                                                <Card.Img style={{width: '200px', height: '200px'}}
+                                                <Card.Img style={{width: '1000px', height: '500px'}}
                                                         src={profilePicPaths[indx] || ''}
                                                         variant="top" />
 
@@ -241,21 +241,21 @@ export default function Contacts() {
 
                     <button  className='actionButton' variant="primary" onClick={handleShow}>Neue Joke hinzufügen +</button>
 
-                    {/* {showForm && ( */}
+                  
                         <Modal   show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
                           <Modal.Title>Neue Joke hinzufügen</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                           <Form>
-                            <Form.Group  className="mb-3" controlId="formBasicText">
-                              <Form.Label>Deine Joke</Form.Label>
+                            <Form.Group  className="mb-3" controlId="exampleForm.ControlInput1">
+                              <Form.Label>Dein Joke</Form.Label>
                               <Form.Control
                                 type="text"
-                                placeholder="Deine Joke"
+                                placeholder="Dein Joke"
                                 value={contactData.email}
                                 onChange={(evt) =>
-                                  setContactData({ ...contactData, name: evt.target.value })
+                                  setContactData({ ...contactData, email: evt.target.value })
                                 }
                               />
                             </Form.Group>
@@ -267,7 +267,7 @@ export default function Contacts() {
                                 placeholder="Author"
                                 value={contactData.name}
                                 onChange={(evt) =>
-                                  setContactData({ ...contactData, cell: evt.target.value })
+                                  setContactData({ ...contactData, name: evt.target.value })
                                 }
                               />
                             </Form.Group>
@@ -286,7 +286,7 @@ export default function Contacts() {
                           <Button variant="secondary" onClick={handleClose}>
                             Abbrechen
                           </Button>
-                          <Button variant="primary" onClick={() => {
+                          <Button style={{backgroundColor:'coral'}} variant="primary" onClick={() => {
                                                                     addNewContact();
                                                                     handleClose();
                                                                 }}>
