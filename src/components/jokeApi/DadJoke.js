@@ -19,7 +19,7 @@ export default function DadJoke() {
     const [jokes, setJokes] = useState("");
 
     const getJokes = () => {
-        setRating (null);
+        setRating(null);
 
         let config = {
             headers: {
@@ -47,8 +47,8 @@ export default function DadJoke() {
         try {
             const newContact = {
                 id: uuid(),
-                name: jokes,
-                email: "jokes",
+                name: "Jokes",
+                email: jokes,
                 cell: rating,
                 profilePicPath: "joke"
             };
@@ -107,9 +107,11 @@ export default function DadJoke() {
                         })}
                         <p>your rating is {rating}</p>
                     </div>
-                    <button className='actionButton' onClick={getJokes}> next Joke</button>
+                   
+                    <button className='mt-5  nextButton' onClick={getJokes}></button>
 
-                    <button className='actionButton' onClick={addNewContact}>Add Joke &gt;&gt;</button>&nbsp;
+                    <button className='mt-5 ml-2 actionButtonLeft' onClick={addNewContact}>Add Joke &gt;&gt;</button>&nbsp;
+
                 </div>
 
             </Row>

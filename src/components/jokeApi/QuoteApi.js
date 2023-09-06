@@ -33,14 +33,15 @@ export default function QuoteApi() {
     }, []);
 
     const addNewContact = async () => {
+        getJokes();
         
         try {
             const newContact = {
                 id: uuid(),
-                name: jokes.author,
+                name:"Zitat",
                 email: jokes.text,
                 cell: rating,
-                profilePicPath: "joke"
+                profilePicPath: "Zitat"
             };
 
             
