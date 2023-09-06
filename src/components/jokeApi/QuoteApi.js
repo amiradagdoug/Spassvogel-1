@@ -19,6 +19,7 @@ export default function QuoteApi() {
     const [jokes,setJokes] = useState ("");
     
     const getJokes = () =>{
+        setRating (null);
         fetch("https://type.fit/api/quotes")
             .then((res) => res.json())
             .then((data) => {
@@ -55,7 +56,7 @@ export default function QuoteApi() {
     return (
         <Container className='contentPage'>
             <Row className="my-5">
-                <Col><h1>Qotes</h1></Col>
+                <Col><h1>Zitat</h1></Col>
             </Row>
             <Row>
             <div className="col-md-3 px-4 my-2">
@@ -98,7 +99,7 @@ export default function QuoteApi() {
 
                     <button className='mt-5  nextButton' onClick={getJokes}></button>
 
-                    <button className='mt-5 actionButtonLeft' onClick={addNewContact}>Add quote &gt;&gt;</button>&nbsp;
+                    <button className='mt-5 ml-2 actionButtonLeft' onClick={addNewContact}>Add Zitat &gt;&gt;</button>&nbsp;
 
                 </div>
 

@@ -87,6 +87,7 @@ input[type=radio] {
 .actionButton:hover,
 .actionButton:focus,
 .actionButtonLeft:hover,
+.nextButton:hover,
 .actionButtonLeft:focus {
     background-color: rgb(118, 33, 2);
     color: #fff;
@@ -209,6 +210,7 @@ form .form-control {
     border: none;
     display: inline-block;
     width: auto;
+    
 }
 
 .nextButton::before {
@@ -221,3 +223,35 @@ form .form-control {
     left: 18px;
     top: 5px;
 }
+
+/* CSS file or style tag in your component */
+.image-container img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover; /* This ensures the image scales while maintaining its aspect ratio */
+  }
+
+  /* CSS file or style tag in your component */
+.slide-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the content takes up the full height of the slide */
+  }
+
+.slide-content {
+    text-align: center;
+  }
+
+/* CSS file or style tag in your component */
+.button-container {
+    padding-top: 20px; /* Adjust the value as needed */
+  }
+  
+  /* Adjust the button styles as needed */
+.button-container button {
+    /* Additional button styles */
+    margin-top: 70px;
+    padding-top: 20px;
+  }
+  

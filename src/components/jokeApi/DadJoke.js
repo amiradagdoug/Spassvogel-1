@@ -19,6 +19,8 @@ export default function DadJoke() {
     const [jokes, setJokes] = useState("");
 
     const getJokes = () => {
+        setRating (null);
+
         let config = {
             headers: {
                 Accept: "application/json"
@@ -64,7 +66,7 @@ export default function DadJoke() {
 
         <Container className='contentPage'>
             <Row className="my-5">
-                <Col><h1>Qotes</h1></Col>
+                <Col><h1>Jokes</h1></Col>
             </Row>
             <Row>
                 <div className="col-md-3 px-4 my-2">
