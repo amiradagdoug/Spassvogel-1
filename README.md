@@ -37,21 +37,21 @@ The online resources which have been used to build this website are listed below
  - AWS Command Line Interface
    - https://aws.amazon.com/cli/
  - GraphQL website
-  - https://graphql.org/
+   - https://graphql.org/
  - Youtube videos to learn about implementing AWS Amplify in a full-stack web application
-  - https://www.youtube.com/watch?v=EkQm78ElnoI&list=PLRBkbp6t5gM1Gc6IDS1wIRSw-oSS-fpi1&index=1
+   - https://www.youtube.com/watch?v=EkQm78ElnoI&list=PLRBkbp6t5gM1Gc6IDS1wIRSw-oSS-fpi1&index=1
 
  - To fetch quotes/jokes from API : Random Quote Generator - React
-  - https://www.youtube.com/watch?v=OpXpwY9Gbzg
+   - https://www.youtube.com/watch?v=OpXpwY9Gbzg
   
  - To code star rating feature in the application : How to Create a Star Rating Component in React
-  - https://www.youtube.com/watch?v=9sSBMF8K7sY
+   - https://www.youtube.com/watch?v=9sSBMF8K7sY
 
  - To code bar graph showing top 10 jokes : Create Charts in React
-  - https://www.youtube.com/watch?v=-CwzaTKniH4
+   - https://www.youtube.com/watch?v=-CwzaTKniH4
 
  - Bootstrap documentation
-  - https://react-bootstrap.github.io/
+   - https://react-bootstrap.github.io/
 
 # User Contributions
 It would be very helpful if you can report bugs which you find on the website. It helps us to improve it further. 
