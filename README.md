@@ -30,24 +30,28 @@ Also we can attract more users by giving out prizes for the users whose jokes ma
 
 # Learn More
 The online resources which have been used to build this website are listed below. You can check out these resources to understand more.
-	AWS Amplify documentation
-https://aws.amazon.com/amplify/
-Amplify UI
-https://ui.docs.amplify.aws/react/getting-started/accessibility
-AWS Command Line Interface
-https://aws.amazon.com/cli/
-GraphQL website
-https://graphql.org/
-Youtube videos to learn about implementing AWS Amplify in a full-stack web application
-AWS Amplify Playlist Intro
-To fetch quotes/jokes from API
-Random Quote Generator - React
-To code star rating feature in the application
-How to Create a Star Rating Component in React
-To code bar graph showing top 10 jokes
-Create Charts in React
-Bootstrap documentation
-https://react-bootstrap.github.io/
+ - AWS Amplify documentation
+   - https://aws.amazon.com/amplify/
+ - Amplify UI
+   - https://ui.docs.amplify.aws/react/getting-started/accessibility
+ - AWS Command Line Interface
+   - https://aws.amazon.com/cli/
+ - GraphQL website
+  - https://graphql.org/
+ - Youtube videos to learn about implementing AWS Amplify in a full-stack web application
+  - https://www.youtube.com/watch?v=EkQm78ElnoI&list=PLRBkbp6t5gM1Gc6IDS1wIRSw-oSS-fpi1&index=1
+
+ - To fetch quotes/jokes from API : Random Quote Generator - React
+  - https://www.youtube.com/watch?v=OpXpwY9Gbzg
+  
+ - To code star rating feature in the application : How to Create a Star Rating Component in React
+  - https://www.youtube.com/watch?v=9sSBMF8K7sY
+
+ - To code bar graph showing top 10 jokes : Create Charts in React
+  - https://www.youtube.com/watch?v=-CwzaTKniH4
+  
+ - Bootstrap documentation
+  - https://react-bootstrap.github.io/
 
 # User Contributions
 It would be very helpful if you can report bugs which you find on the website. It helps us to improve it further. 
