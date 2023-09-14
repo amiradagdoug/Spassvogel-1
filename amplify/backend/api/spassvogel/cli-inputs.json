@@ -4,8 +4,17 @@
     "apiName": "spassvogel",
     "serviceName": "AppSync",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authspassvogel739bd3a3"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2024-09-13T00:07:28.208Z",
+        "keyDescription": ""
+      }
+    ]
   }
 }

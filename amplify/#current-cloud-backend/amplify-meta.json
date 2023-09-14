@@ -12,37 +12,59 @@
       "AmplifyAppId": "d2ja606fvd2z0i"
     }
   },
+  "api": {
+    "spassvogel": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "d7xyliy2jvcorlx4d6kbe77z6u",
+        "GraphQLAPIEndpointOutput": "https://tcv4gq5m35fzpbapagaoob6y7q.appsync-api.eu-central-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-g2gh3vprnjgg7dbuvhxf4kk5n4"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-09-06T23:58:24.692Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apispassvogel"
+      },
+      "lastPushDirHash": "J49jS/QNedVYCq6pnmDFnXPHQQo="
+    }
+  },
   "auth": {
     "spassvogel739bd3a3": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
       "customAuth": false,
+      "dependsOn": [],
       "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
         "mfaConfiguration": "OFF",
         "mfaTypes": [
           "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
         ],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/auth/spassvogel739bd3a3-cloudformation-template.json",
-        "logicalId": "authspassvogel739bd3a3"
-      },
-      "lastPushTimeStamp": "2023-08-28T19:42:36.304Z",
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
       "output": {
         "UserPoolId": "eu-central-1_XR3yvQhX7",
         "AppClientIDWeb": "vefcl8nkjeo7a3fvqkso6ro5n",
@@ -52,51 +74,29 @@
         "IdentityPoolName": "spassvogel739bd3a3_identitypool_739bd3a3__dev",
         "UserPoolName": "spassvogel739bd3a3_userpool_739bd3a3"
       },
-      "lastPushDirHash": "By11xMh3keIu3O+Wqdlyjzpj4XM="
+      "lastPushTimeStamp": "2023-09-06T23:58:24.692Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/auth/spassvogel739bd3a3-cloudformation-template.json",
+        "logicalId": "authspassvogel739bd3a3"
+      },
+      "lastPushDirHash": "Q/daAxPI9OFA9J7Xu/j3FNtLnbQ="
     }
   },
   "storage": {
     "contactstorage": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2023-08-28T19:42:36.310Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storagecontactstorage"
-      },
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
       "output": {
         "BucketName": "contactstorage170839-dev",
         "Region": "eu-central-1"
       },
-      "lastPushDirHash": "vsDfC1QTDPxLtBxFwppEIIUu7gY="
-    }
-  },
-  "api": {
-    "spassvogel": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": []
-        },
-        "GraphQLAPIIdOutput": "d7xyliy2jvcorlx4d6kbe77z6u",
-        "GraphQLAPIEndpointOutput": "https://tcv4gq5m35fzpbapagaoob6y7q.appsync-api.eu-central-1.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-g2gh3vprnjgg7dbuvhxf4kk5n4"
-      },
+      "lastPushTimeStamp": "2023-09-06T23:58:24.692Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apispassvogel"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storagecontactstorage"
       },
-      "lastPushTimeStamp": "2023-08-28T19:42:37.912Z",
-      "lastPushDirHash": "J49jS/QNedVYCq6pnmDFnXPHQQo="
+      "lastPushDirHash": "vsDfC1QTDPxLtBxFwppEIIUu7gY="
     }
   }
 }
