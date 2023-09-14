@@ -14,15 +14,32 @@
   },
   "api": {
     "spassvogel": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "spassvogel739bd3a3"
+        }
+      ],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2024-09-13T00:07:28.208Z",
+                "apiKeyExpirationDays": 365,
+                "description": ""
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
           "defaultAuthentication": {
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            },
-            "authenticationType": "API_KEY"
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authspassvogel739bd3a3"
+            }
           }
         },
         "GraphQLAPIIdOutput": "d7xyliy2jvcorlx4d6kbe77z6u",
@@ -31,12 +48,12 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-09-06T23:58:24.692Z",
+      "lastPushTimeStamp": "2023-09-14T07:35:16.784Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apispassvogel"
       },
-      "lastPushDirHash": "J49jS/QNedVYCq6pnmDFnXPHQQo="
+      "lastPushDirHash": "dDQL2n/SMmEfnFUbFOvxUsXng38="
     }
   },
   "auth": {
@@ -74,7 +91,7 @@
         "IdentityPoolName": "spassvogel739bd3a3_identitypool_739bd3a3__dev",
         "UserPoolName": "spassvogel739bd3a3_userpool_739bd3a3"
       },
-      "lastPushTimeStamp": "2023-09-06T23:58:24.692Z",
+      "lastPushTimeStamp": "2023-09-14T07:35:16.784Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/auth/spassvogel739bd3a3-cloudformation-template.json",
         "logicalId": "authspassvogel739bd3a3"
@@ -91,7 +108,7 @@
         "BucketName": "contactstorage170839-dev",
         "Region": "eu-central-1"
       },
-      "lastPushTimeStamp": "2023-09-06T23:58:24.692Z",
+      "lastPushTimeStamp": "2023-09-14T07:35:16.784Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storagecontactstorage"

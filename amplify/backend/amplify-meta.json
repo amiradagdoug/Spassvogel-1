@@ -42,7 +42,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/auth/spassvogel739bd3a3-cloudformation-template.json",
         "logicalId": "authspassvogel739bd3a3"
       },
-      "lastPushTimeStamp": "2023-09-14T00:07:33.218Z",
+      "lastPushTimeStamp": "2023-09-14T08:03:03.495Z",
       "output": {
         "UserPoolId": "eu-central-1_XR3yvQhX7",
         "AppClientIDWeb": "vefcl8nkjeo7a3fvqkso6ro5n",
@@ -60,7 +60,7 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2023-09-14T00:07:33.246Z",
+      "lastPushTimeStamp": "2023-09-14T08:03:03.535Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storagecontactstorage"
@@ -76,33 +76,18 @@
     "spassvogel": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "spassvogel739bd3a3"
-        }
-      ],
+      "dependsOn": [],
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authspassvogel739bd3a3"
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "apiKeyExpirationDate": "2024-09-13T08:02:14.631Z",
+              "description": ""
             }
           },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "API_KEY",
-              "apiKeyConfig": {
-                "apiKeyExpirationDays": 365,
-                "apiKeyExpirationDate": "2024-09-13T00:07:28.208Z",
-                "description": ""
-              }
-            }
-          ]
+          "additionalAuthenticationProviders": []
         },
         "GraphQLAPIIdOutput": "d7xyliy2jvcorlx4d6kbe77z6u",
         "GraphQLAPIEndpointOutput": "https://tcv4gq5m35fzpbapagaoob6y7q.appsync-api.eu-central-1.amazonaws.com/graphql",
@@ -112,7 +97,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apispassvogel"
       },
-      "lastPushTimeStamp": "2023-09-14T00:07:33.237Z",
+      "lastPushTimeStamp": "2023-09-14T08:03:03.485Z",
       "lastPushDirHash": "J49jS/QNedVYCq6pnmDFnXPHQQo="
     }
   }

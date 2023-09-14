@@ -2,11 +2,5 @@
   "AppSyncApiName": "spassvogel",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthCognitoUserPoolId": {
-    "Fn::GetAtt": [
-      "authspassvogel739bd3a3",
-      "Outputs.UserPoolId"
-    ]
-  },
-  "AuthModeLastUpdated": "2023-09-13T23:59:10.023Z"
+  "AuthModeLastUpdated": "2023-09-14T08:02:21.670Z"
 }
