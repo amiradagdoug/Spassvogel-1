@@ -17,6 +17,7 @@ import StaticJokes from './components/static/StaticJokes';
 
 
 
+
 Amplify.configure(awsExports);
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       {({ signOut, user }) => (
         <div>
 
-          <SiteNav logOut={signOut} />
+          <SiteNav logOut={signOut} user={user}/>
           <Routes>
             <Route path='*' element={<HomePage />} />
             <Route path='/' exact={true} element={<HomePage />} />

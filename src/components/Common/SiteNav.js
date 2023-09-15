@@ -21,7 +21,8 @@ function SiteNav(props) {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-md-auto">
 
-                            <Nav.Link onClick={handleLogout}>Ausloggen</Nav.Link>
+                            <Nav.Link onClick={handleLogout}>Ausloggen </Nav.Link>
+                            <h4> hi {props.user.attributes.email} </h4>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
