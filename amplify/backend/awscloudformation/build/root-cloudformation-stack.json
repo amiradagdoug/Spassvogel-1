@@ -1,5 +1,5 @@
 {
-  "Description": "Root Stack for AWS Amplify CLI",
+  "Description": "Root Stack for AWS Amplify Console",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "DeploymentBucketName": {
@@ -152,6 +152,32 @@
         }
       }
     },
+    "apispassvogel": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "spassvogel",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "AuthCognitoUserPoolId": {
+            "Fn::GetAtt": [
+              "authspassvogel739bd3a3",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-spassvogel-dev-170839-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/0bff9ee9cb288b8114fd5251da33fef05b8efa7e",
+          "env": "dev"
+        }
+      }
+    },
     "authspassvogel739bd3a3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -235,20 +261,6 @@
           "s3PermissionsAuthenticatedUploads": "s3:PutObject",
           "s3PermissionsGuestPublic": "DISALLOW",
           "s3PermissionsGuestUploads": "DISALLOW",
-          "env": "dev"
-        }
-      }
-    },
-    "apispassvogel": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-spassvogel-dev-170839-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "Parameters": {
-          "AppSyncApiName": "spassvogel",
-          "DynamoDBBillingMode": "PAY_PER_REQUEST",
-          "DynamoDBEnableServerSideEncryption": false,
-          "S3DeploymentBucket": "amplify-spassvogel-dev-170839-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/901828a48344e36a83381a66cd664cde6e3761f1",
           "env": "dev"
         }
       }

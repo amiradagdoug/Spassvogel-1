@@ -1,8 +1,257 @@
-input[type = radio]{
+input[type=radio] {
     display: none;
 }
 
 .star {
     cursor: pointer;
-   
+
 }
+
+
+.cardJoke {
+    min-height: 400px;
+    border-radius: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cardJoke .card-img-top {
+
+    margin: auto;
+}
+
+.cardJoke .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 15px;
+}
+
+.cardJoke .card-title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.cardJoke .card-text {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.starRating svg {
+    width: 20px;
+}
+
+
+
+
+.actionButton {
+    width: auto;
+    border-radius: 0px;
+    color: #fff;
+    background-color: coral;
+    border: 0px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+}
+
+.actionButtonLeft {
+    width: auto;
+    border-radius: 0px;
+    color: #fff;
+    background-color: coral;
+    border: 0px;
+    text-transform: uppercase;
+    margin-right: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+
+.actionButtonLeft button {
+    border: transparent;
+    padding: 0px;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.actionButton:hover,
+.actionButton:focus,
+.actionButtonLeft:hover,
+.nextButton:hover,
+.actionButtonLeft:focus {
+    background-color: rgb(118, 33, 2);
+    color: #fff;
+}
+
+/* Header */
+.nav-link img {
+    max-width: 140px;
+}
+
+header .navbar {
+    box-shadow: 0px 0px 10px #aaaaaa;
+}
+
+header #basic-navbar-nav .nav-link {
+    color: #000;
+    text-transform: uppercase;
+    background: #f2c202;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.spassvogel-footer {
+    background-color: #ccc;
+    margin-bottom: 0px !important;
+}
+
+
+.spassvogel-footer p {
+    margin-bottom: 0px !important;
+}
+
+.homePage .actionButton {
+    display: inline-block;
+    width: auto;
+    margin-right: 25px;
+    margin-bottom: 25px;
+   
+    
+}
+
+#carouselExampleControls {
+    max-width: 100%;
+    margin: auto;
+}
+
+.contentPage {
+    min-height: 65vh;
+}
+
+.recharts-wrapper .recharts-bar-rectangle .recharts-rectangle,
+.recharts-legend-item path {
+    fill: coral;
+}
+
+.recharts-legend-item-text,
+.recharts-default-tooltip ul * {
+    color: coral !important;
+}
+
+/* Form */
+form .form-control {
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    color: #000;
+    background-color: var(--bs-body-bg);
+    border-color: coral;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255, 127, 80, .25);
+}
+
+.editButton {
+    position: relative;
+    background: coral;
+    border-radius: 0;
+    padding: 15px;
+    border: none;
+    
+}
+
+.editButton::before {
+    content: '';
+    position: absolute;
+    background: url('../public/img/icons-edit.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 5px;
+}
+
+
+.deleteButton {
+    position: relative;
+    background: coral;
+    border-radius: 0;
+    padding: 15px;
+    border: none;
+}
+
+.deleteButton::before {
+    content: '';
+    position: absolute;
+    background: url('../public/img/icons-delete.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 5px;
+}
+
+
+.nextButton {
+    position: relative;
+    background: coral;
+    border-radius: 0;
+    padding: 15px 25px;
+    border: none;
+    display: inline-block;
+    width: auto;
+    
+}
+
+.nextButton::before {
+    content: '';
+    position: absolute;
+    background: url('../public/img/icons-next.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 18px;
+    top: 5px;
+}
+
+/* CSS file or style tag in your component */
+.image-container img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover; /* This ensures the image scales while maintaining its aspect ratio */
+  }
+
+  /* CSS file or style tag in your component */
+.slide-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the content takes up the full height of the slide */
+  }
+
+.slide-content {
+    text-align: center;
+  }
+
+/* CSS file or style tag in your component */
+.button-container {
+    padding-top: 20px; /* Adjust the value as needed */
+  }
+  
+  /* Adjust the button styles as needed */
+.button-container button {
+    /* Additional button styles */
+    margin-top: 70px;
+    padding-top: 20px;
+  }
+  
